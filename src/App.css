@@ -38,6 +38,7 @@
   /* border: 1px solid black; */
   word-wrap: break-word;
   margin-bottom: 9px;
+  white-space:normal;
   text-align: left;
   margin: 0 auto;
   margin-bottom: 10px;
