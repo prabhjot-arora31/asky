@@ -110,7 +110,7 @@ useEffect(() => {
                 src="https://cdn.dribbble.com/users/2496529/screenshots/5500128/botfactory_loader4x3.gif"
                 alt=""
               />
-              <div ref={divRef} />
+            
             </div>
           )}
         </div>
