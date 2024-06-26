@@ -17,7 +17,7 @@ function App() {
     "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=AIzaSyCugul8ngTXWI5pzvCFRxS52NRcMIyHtI8";
 useEffect(() => {
     divRef.current.scrollIntoView({ behavior: 'smooth' });
-  });
+  },[]);
   async function callAPI() {
     setisLoading(true);
     settempText(text);
