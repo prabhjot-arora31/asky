@@ -5,7 +5,7 @@ import "./App.css";
 import axios from "axios";
 
 function App() {
-  const divRef = useRef(null);
+//  const divRef = useRef(null);
   const [text, settext] = useState("");
   const [tempText, settempText] = useState("");
   const [isUpdated, setIsUpdated] = useState(false);
@@ -16,7 +16,12 @@ function App() {
   const url2 =
     "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=AIzaSyCugul8ngTXWI5pzvCFRxS52NRcMIyHtI8";
 useEffect(() => {
-    divRef.current.scrollIntoView({ behavior: 'smooth' });
+  window.scrollTo({
+  top: document.body.scrollHeight,
+  left: 0,
+  behavior: 'smooth'
+});
+   // divRef.current.scrollIntoView({ behavior: 'smooth' });
   },[]);
   async function callAPI() {
     setisLoading(true);
@@ -96,7 +101,7 @@ useEffect(() => {
                     alt=""
                   />
                   {ele.text}
-                  <div ref={divRef} />
+                  
                 </div>
               );
           })}
