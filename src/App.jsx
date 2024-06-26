@@ -17,7 +17,7 @@ function App() {
     "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=AIzaSyCugul8ngTXWI5pzvCFRxS52NRcMIyHtI8";
 useEffect(() => {
    document.getElementsByClassName('chat-area')[0].scrollTo({
-  top: document.getElementsByClassName('chat-area')[0]..scrollHeight,
+  top: document.getElementsByClassName('chat-area')[0].scrollHeight,
   left: 0,
   behavior: 'smooth'
 });
