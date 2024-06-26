@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useRef , useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import axios from "axios";
 
 function App() {
+  const divRef = useRef(null);
   const [text, settext] = useState("");
   const [tempText, settempText] = useState("");
   const [isUpdated, setIsUpdated] = useState(false);
@@ -14,7 +15,9 @@ function App() {
   const [isLoading, setisLoading] = useState(false);
   const url2 =
     "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=AIzaSyCugul8ngTXWI5pzvCFRxS52NRcMIyHtI8";
-
+useEffect(() => {
+    divRef.current.scrollIntoView({ behavior: 'smooth' });
+  });
   async function callAPI() {
     setisLoading(true);
     settempText(text);
@@ -93,6 +96,7 @@ function App() {
                     alt=""
                   />
                   {ele.text}
+                  <div ref={divRef} />
                 </div>
               );
           })}
@@ -106,6 +110,7 @@ function App() {
                 src="https://cdn.dribbble.com/users/2496529/screenshots/5500128/botfactory_loader4x3.gif"
                 alt=""
               />
+              <div ref={divRef} />
             </div>
           )}
         </div>
