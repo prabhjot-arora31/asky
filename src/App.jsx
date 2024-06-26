@@ -22,7 +22,7 @@ useEffect(() => {
   behavior: 'smooth'
 });
    // divRef.current.scrollIntoView({ behavior: 'smooth' });
-  },[]);
+  },[showData]);
   async function callAPI() {
     setisLoading(true);
     settempText(text);
